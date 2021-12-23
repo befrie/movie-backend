@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titel": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "land": {
+      "type": "string"
+    },
+    "regie": {
+      "type": "string"
+    },
+    "erscheinungsjahr": {
+      "type": "integer"
+    },
+    "beschreibung": {
+      "type": "text"
+    },
+    "aufbewahrungsort": {
+      "type": "string"
+    },
+    "medium": {
+      "type": "string"
+    },
+    "bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "darsteller": {
+      "type": "component",
+      "repeatable": true,
+      "component": "multifeld.darsteller"
+    },
+    "genre": {
+      "type": "component",
+      "repeatable": true,
+      "component": "multifeld.darsteller"
+    }
+  }
+}
