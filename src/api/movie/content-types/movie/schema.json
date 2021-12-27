@@ -46,15 +46,17 @@
         "videos"
       ]
     },
-    "darsteller": {
-      "type": "component",
-      "repeatable": true,
-      "component": "multifeld.darsteller"
+    "actors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::actor.actor",
+      "inversedBy": "movies"
     },
-    "genre": {
-      "type": "component",
-      "repeatable": true,
-      "component": "multifeld.darsteller"
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "mappedBy": "movies"
     }
   }
 }
