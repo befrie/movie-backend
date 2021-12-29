@@ -8,13 +8,13 @@ const slugify = require('slugify')
 
 module.exports = {
     lifecycles: {
-     async beforeCreate(movie) {
-        if (movie.titel) {
-            movie.slug = slugify(movie.titel, {lower: true})
+     beforeCreate: async(data) => {
+        if (data.titel) {
+            data.slug = slugify(data.titel, {lower: true})
         } },
-     async beforeUpdate(movie) {
-        if (movie.titel) {
-            movie.slug = slugify(movie.titel, {lower: true})
+     beforeUpdate: async(data) => {
+        if (data.titel) {
+            data.slug = slugify(data.titel, {lower: true})
         }},   
     }
 };
