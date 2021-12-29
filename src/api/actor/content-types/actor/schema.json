@@ -21,7 +21,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::movie.movie",
-      "inversedBy": "actors"
+      "mappedBy": "actors"
     }
   }
 }

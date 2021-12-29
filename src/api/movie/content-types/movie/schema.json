@@ -57,6 +57,11 @@
       "relation": "manyToMany",
       "target": "api::genre.genre",
       "mappedBy": "movies"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
