@@ -10,11 +10,11 @@ module.exports = {
     lifecycles: {
      beforeCreate: async(data) => {
         if (data.titel) {
-            data.slug = slugify(data.titel, {lower: true})
+            data.Slug = slugify(data.titel, {lower: true})
         } },
      beforeUpdate: async(data) => {
         if (data.titel) {
-            data.slug = slugify(data.titel, {lower: true})
+            data.Slug = slugify(data.titel, {lower: true})
         }},   
     }
 };
