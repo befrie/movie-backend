@@ -58,7 +58,7 @@
       "target": "api::genre.genre",
       "mappedBy": "movies"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "targetField": "titel"
     }
